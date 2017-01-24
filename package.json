@@ -1,0 +1,35 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "description": "College of Graduate Studies System API",
+  "scripts": {
+    "start": "concurrently \"npm run web:run\" \"npm run api:run\"",
+    "build": "npm run web:build && npm run api:build",
+    "api:run": "concurrently \"npm run api:watch\" \"nodemon dist/bin/www.js\"",
+    "api:build": "tsc -p ./api",
+    "api:watch": "tsc -w -p ./api",
+    "web:run": "cd web && npm start",
+    "web:build": "cd web && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=6.9.4"
+  },
+  "dependencies": {
+    "concurrently": "^3.1.0",
+    "hapi": "^16.1.0",
+    "inert": "^4.1.0",
+    "path": "^0.12.7",
+    "typescript": "^2.1.5"
+  },
+  "devDependencies": {
+    "@types/hapi": "^13.0.38",
+    "@types/inert": "^4.0.0",
+    "@types/node": "^6.0.42",
+    "nodemon": "^1.11.0",
+    "tslint": "^4.3.1",
+    "typescript": "~2.1.5"
+  }
+}
