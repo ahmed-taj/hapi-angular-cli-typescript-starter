@@ -2,7 +2,7 @@
   "verbose": false,
   "ignore": [
     ".git",
-    "dist/public",
+    "public",
     "node_modules/**/node_modules"
   ],
   "execMap": {
@@ -14,5 +14,6 @@
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": "js"
+  "ext": "ts json",
+  "exec": "ts-node"
 }

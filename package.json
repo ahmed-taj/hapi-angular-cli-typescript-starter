@@ -1,16 +1,17 @@
 {
-  "name": "api",
+  "name": "hapi-angular-typescript-starter",
   "version": "0.0.0",
-  "description": "College of Graduate Studies System API",
+  "description": "Hapi + Angular + Typescript starter",
   "scripts": {
     "start": "concurrently \"npm run web:run\" \"npm run api:run\"",
     "build": "npm run web:build && npm run api:build",
-    "api:run": "concurrently \"npm run api:watch\" \"nodemon dist/bin/www.js\"",
-    "api:build": "tsc -p ./api",
-    "api:watch": "tsc -w -p ./api",
-    "web:run": "cd web && npm start",
-    "web:build": "cd web && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "api:run": "nodemon ./bin/www.ts",
+    "web:run": "cd public && npm start",
+    "api:build": "tsc -p .",
+    "web:build": "cd public && npm run build",
+    "test": "npm run web:test && npm run api:test",
+    "api:test": "mocha -r ts-node/register spec/**/*.spec.ts",
+    "web:test": "cd public && npm test"
   },
   "license": "MIT",
   "private": true,
@@ -18,18 +19,24 @@
     "node": ">=6.9.4"
   },
   "dependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
     "concurrently": "^3.1.0",
     "hapi": "^16.1.0",
     "inert": "^4.1.0",
-    "path": "^0.12.7",
-    "typescript": "^2.1.5"
+    "mocha": "^3.2.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/chai-http": "0.0.29",
     "@types/hapi": "^13.0.38",
     "@types/inert": "^4.0.0",
+    "@types/mocha": "^2.2.38",
     "@types/node": "^6.0.42",
+    "ava": "^0.17.0",
     "nodemon": "^1.11.0",
     "tslint": "^4.3.1",
-    "typescript": "~2.1.5"
+    "typescript": "~2.0.3"
   }
 }
