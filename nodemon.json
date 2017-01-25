@@ -2,14 +2,14 @@
   "verbose": false,
   "ignore": [
     ".git",
-    "public",
+    "web",
     "node_modules/**/node_modules"
   ],
   "execMap": {
     "js": "node"
   },
   "watch": [
-    "*"
+    "api"
   ],
   "env": {
     "NODE_ENV": "development"

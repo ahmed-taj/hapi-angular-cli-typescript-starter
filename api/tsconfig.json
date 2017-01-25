@@ -6,10 +6,10 @@
     "lib": [
       "es6"
     ],
-    "mapRoot": "dist",
+    "mapRoot": "../dist",
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "dist",
+    "outDir": "../dist",
     "sourceMap": true,
     "target": "es6",
     "typeRoots": [

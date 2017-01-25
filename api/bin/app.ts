@@ -41,8 +41,6 @@ app.register(inert, (err) => {
       if (req.params['file'] && reg.test(req.params['file'])) {
         reply.file(req.params['file']);
       } else {
-        console.log(__dirname);
-
         reply.file('index.html');
       }
     }
