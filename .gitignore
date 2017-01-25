@@ -1,5 +1,8 @@
-
-# Created by https://www.gitignore.io/api/node,windows,visualstudiocode,typings,sass,git
+### Project specific ###
+dist
+bin/*.js
+conf/*.js
+spec/*.js
 
 ### Node ###
 # Logs

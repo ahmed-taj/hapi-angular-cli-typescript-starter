@@ -5,7 +5,7 @@
   "scripts": {
     "start": "concurrently \"npm run web:run\" \"npm run api:run\"",
     "build": "npm run web:build && npm run api:build",
-    "api:run": "nodemon ./bin/www.ts",
+    "api:run": "nodemon ./bin/app.ts",
     "web:run": "cd public && npm start",
     "api:build": "tsc -p .",
     "web:build": "cd public && npm run build",
